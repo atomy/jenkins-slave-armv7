@@ -6,6 +6,10 @@ RUN addgroup --system jenkins
 RUN adduser --system --home $HOME --ingroup jenkins jenkins
 
 ADD jenkins-jnlp.sh /usr/share/jenkins/jenkins-jnlp.sh
+
+RUN chown jenkins:jenkins /usr/share/jenkins/jenkins-jnlp.sh
+RUN chmod +x /usr/share/jenkins/jenkins-jnlp.sh
+
 ADD https://jenkins.iogames.de/jnlpJars/agent.jar /usr/share/jenkins/agent.jar
 
 RUN chown jenkins:jenkins /usr/share/jenkins/agent.jar

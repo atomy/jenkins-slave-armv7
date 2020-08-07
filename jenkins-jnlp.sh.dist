@@ -1,0 +1,4 @@
+#!/bin/sh
+
+java -jar /usr/share/jenkins/agent.jar -jnlpUrl https://xxxxx.xxxxx.com/computer/SUPER_DUPER_COMPUTER/slave-agent.jnlp -secret xxxxxxxxxxx -workDir "/var/jenkins_home"
+
